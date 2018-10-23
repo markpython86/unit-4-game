@@ -2,6 +2,8 @@ $(document).ready(function() {
 
 var arr = [];
 
+var totalScore = 0
+
 
 for (var i = 0; i < 4; i++) {
 var a = Math.floor(Math.random() * 12)+1; 
@@ -12,19 +14,23 @@ var a = Math.floor(Math.random() * 12)+1;
 
 $('#red').click(function(){
     this.value = arr[0];
-    $(".randomNumber").text(this.value);
+    $("#totalScore").text(totalScore);
+    totalScore+=arr[0];
 });
 $('#blue').click(function(){
     this.value = arr[1];
-    $(".randomNumber").text(this.value);
+    totalScore += arr[1];
+    $("#totalScore").text(totalScore);
 });
 $('#gold').click(function(){
     this.value = arr[2];
-    $(".randomNumber").text(this.value);
+    totalScore+= arr[2];
+    $("#totalScore").text(totalScore);
 });
 $('#green').click(function(){
     this.value = arr[3];
-    $(".randomNumber").text(this.value);
+    totalScore+= arr[3];
+    $("#totalScore").text(totalScore);
 });
 });
 
