@@ -1,5 +1,7 @@
-$(document).ready(function() {
 
+
+$(document).ready(function() {
+	// declaring logic
 	var totalScore = 0;
 	var win;
 	var lose;
@@ -9,42 +11,46 @@ $(document).ready(function() {
 	var b = Math.floor(Math.random() * 12)+1; 
 	var c = Math.floor(Math.random() * 12)+1; 
 	var d = Math.floor(Math.random() * 12)+1; 
-
 	var randomNumber = Math.floor(Math.random() * (120-19))+19;
 	$(".randomNumber").text(randomNumber);
+
+	// crystal function when click any crystal take the value and added to the totalScore
 	function crystals(){		
 		console.log(a);
 		console.log(b);
 		console.log(c);
 		console.log(d);
-
+		// red crystal on click function
 		$('#red').click(function(){
 		parseInt(totalScore+= d);
 		console.log(d);
 		$("#totalScore").text(totalScore);
-	    checkWin();
+	    checkWinOrLose();
 		});
+		// blue crystal on click function		
 		$('#blue').click(function(){
 			parseInt(totalScore += a);
 			console.log(a);
 			$("#totalScore").text(totalScore);
-	    	checkWin();
+	    	checkWinOrLose();
 		});
+		// gold crystal on click function
 		$('#gold').click(function(){
 			parseInt(totalScore+= b);
 			console.log(b);
 			$("#totalScore").text(totalScore);
-	    	checkWin();
+	    	checkWinOrLose();
 		});
+		// green crystal on click function
 		$('#green').click(function(){
 			parseInt(totalScore+= c);
 			console.log(c);
 			$("#totalScore").text(totalScore);
-	    checkWin();
+	    checkWinOrLose();
 		});
 
 	}
-
+	// reset the game total score and redeclare the variables for each crystal once win or lose
 	function resetScore(){
 		totalScore = 0;
 		$("#totalScore").text(totalScore);
@@ -57,14 +63,14 @@ $(document).ready(function() {
 		console.log(c);
 		console.log(d);		
 	}
-
-	function updateScreen(){
+	//update the score to be matched 
+	function updateScoreToBeMatched(){
 		if (win === true || lose ===true){
 		randomNumber = Math.floor(Math.random() * (120-19))+19;
 		$(".randomNumber").text(randomNumber);
 		}
 	}
-	function checkWin(){
+	function checkWinOrLose(){
 		if (totalScore === randomNumber){
 			console.log("youwin!!!");
 			win = true;
@@ -72,7 +78,7 @@ $(document).ready(function() {
 			console.log("wins"+winText);
 			$(".wins").text("Wins: "+winText);
 			resetScore();
-			updateScreen();
+			updateScoreToBeMatched();
 		} else if ( randomNumber <= totalScore){
 			console.log("lose!!!");
 			lose = true;
@@ -80,10 +86,12 @@ $(document).ready(function() {
 			loseText++;
 			$(".loses").text("Loses: "+loseText);
 			console.log("loses" +loseText);
-			updateScreen();
+			updateScoreToBeMatched();
 		}
 	}
-	updateScreen();
+
+	//run functions when page refresh
+	updateScoreToBeMatched();
 	crystals();
 
 
