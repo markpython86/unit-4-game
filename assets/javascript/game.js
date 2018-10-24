@@ -15,10 +15,7 @@ $(document).ready(function() {
 	$(".randomNumber").text(randomNumber);
 
 
-	// crystal function when click any crystal take the value and added to the totalScore
-	function crystals(){
-		// $(".alert").delay(5000).hide();
-=======
+
 	// crystal function when click any crystal take the value and added to the totalScore
 	function crystals(){		
 		console.log(a);
@@ -57,7 +54,6 @@ $(document).ready(function() {
 	}
 	// reset the game total score and redeclare the variables for each crystal once win or lose
 	function resetScore(){
-		 // $(".alert").alert('close');
 		setTimeout(function(){
    		$('#showWin').hide();
    		$('#showLose').hide();
@@ -103,18 +99,7 @@ $(document).ready(function() {
 		}
 	}
 
-			resetScore();
-			updateScoreToBeMatched();
-		} else if ( randomNumber <= totalScore){
-			console.log("lose!!!");
-			lose = true;
-			resetScore();
-			loseText++;
-			$(".loses").text("Loses: "+loseText);
-			console.log("loses" +loseText);
-			updateScoreToBeMatched();
-		}
-	}
+			
 
 
 	//run functions when page refresh
