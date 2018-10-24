@@ -18,6 +18,9 @@ $(document).ready(function() {
 	// crystal function when click any crystal take the value and added to the totalScore
 	function crystals(){
 		// $(".alert").delay(5000).hide();
+=======
+	// crystal function when click any crystal take the value and added to the totalScore
+	function crystals(){		
 		console.log(a);
 		console.log(b);
 		console.log(c);
@@ -99,10 +102,27 @@ $(document).ready(function() {
 			updateScoreToBeMatched();
 		}
 	}
+
+			resetScore();
+			updateScoreToBeMatched();
+		} else if ( randomNumber <= totalScore){
+			console.log("lose!!!");
+			lose = true;
+			resetScore();
+			loseText++;
+			$(".loses").text("Loses: "+loseText);
+			console.log("loses" +loseText);
+			updateScoreToBeMatched();
+		}
+	}
+
+
 	//run functions when page refresh
 	updateScoreToBeMatched();
 	crystals();
 
 
 
+
 }); // End of Document ready
+
