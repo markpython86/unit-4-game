@@ -1,16 +1,21 @@
+nav.navbar.navbar-expand-lg.navbar-dark.bg-dark{
+	background-color: #0E1440 !important;
+}
+
 .navbar{
 	text-align: center;
+	color: #fff;
+	
 }
 
 .card-title{
-	margin: 31px auto;
-	text-align: center;
+	margin: 0 auto;
+	/*text-align: center;*/
 
 }
 
 img{
-	width: 130px;
-	border: 2px solid dodgerblue;
+	width: 99px;
 }
 
 .col-lg-9 {
@@ -20,4 +25,37 @@ img{
 
 #red, #blue, #green, #gold, .hover{
 	cursor: pointer; 
+}
+
+.reset-margin{
+	margin-left: 0;
+	margin-top: 37px;
+}
+
+.col-md-6 .row{
+	margin-bottom:11px;
+}
+
+.display-4{
+	text-align: center;
+	margin-top: 0;
+	
+}
+.jumbotron{
+	padding: 1rem 2rem;
+	background-color: #2CB5FF;
+}
+
+body{
+	background-image: url(../images/carole-smile-784766-unsplash.jpg);
+	background-size: cover;
+}
+
+
+@media (min-width: 768px){
+.col-md-3 {
+    max-width: 36%;
+    margin: 4% auto;
+}
+
 }
