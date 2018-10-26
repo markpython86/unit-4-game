@@ -100,8 +100,6 @@ $(document).ready(function() {
 	}
 
 			
-
-
 	//run functions when page refresh
 	updateScoreToBeMatched();
 	crystals();
