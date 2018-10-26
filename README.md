@@ -15,7 +15,7 @@ Crystal-Collector-Game is a Javascript Jquery app that uses the Math.floor(Math.
 <a name="pseudocode"></a>
 ## Pseudo Code 
 
-![Crystal Collector](/assets/images/game.jpg)
+![Crystal Collector](/assets/images/game.png)
 
 1. [Watch the demo](https://youtu.be/yNI0l2FMeCk).
 
